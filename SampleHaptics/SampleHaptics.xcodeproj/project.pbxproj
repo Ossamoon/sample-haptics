@@ -13,6 +13,8 @@
 		0B1EED3626428FE3004F58AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B1EED3526428FE3004F58AE /* Preview Assets.xcassets */; };
 		0B1EED4126428FE3004F58AE /* SampleHapticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1EED4026428FE3004F58AE /* SampleHapticsTests.swift */; };
 		0B1EED4C26428FE3004F58AE /* SampleHapticsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1EED4B26428FE3004F58AE /* SampleHapticsUITests.swift */; };
+		0B8285B52648020E00609C98 /* HapticController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8285B42648020E00609C98 /* HapticController.swift */; };
+		0B8285B72648031E00609C98 /* sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0B8285B62648031E00609C98 /* sound.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		0B1EED4726428FE3004F58AE /* SampleHapticsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleHapticsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B1EED4B26428FE3004F58AE /* SampleHapticsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHapticsUITests.swift; sourceTree = "<group>"; };
 		0B1EED4D26428FE3004F58AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B8285B42648020E00609C98 /* HapticController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticController.swift; sourceTree = "<group>"; };
+		0B8285B62648031E00609C98 /* sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sound.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 			children = (
 				0B1EED2E26428FE2004F58AE /* SampleHapticsApp.swift */,
 				0B1EED3026428FE2004F58AE /* ContentView.swift */,
+				0B8285B42648020E00609C98 /* HapticController.swift */,
+				0B8285B62648031E00609C98 /* sound.mp3 */,
 				0B1EED3226428FE3004F58AE /* Assets.xcassets */,
 				0B1EED3726428FE3004F58AE /* Info.plist */,
 				0B1EED3426428FE3004F58AE /* Preview Content */,
@@ -234,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1EED3626428FE3004F58AE /* Preview Assets.xcassets in Resources */,
+				0B8285B72648031E00609C98 /* sound.mp3 in Resources */,
 				0B1EED3326428FE3004F58AE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1EED3126428FE2004F58AE /* ContentView.swift in Sources */,
+				0B8285B52648020E00609C98 /* HapticController.swift in Sources */,
 				0B1EED2F26428FE2004F58AE /* SampleHapticsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
