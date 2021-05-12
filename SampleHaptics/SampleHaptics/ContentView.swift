@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    // UI表示に必要なパラメーター
     @State private var bpm: Int = 60
     @State private var isPlaying: Bool = false
+    
+    // コントローラーのインスタンス
     private var hapticController = HapticController()
     
     var body: some View {
@@ -18,9 +20,11 @@ struct ContentView: View {
             Text("BPM")
                 .font(.system(size: 20))
             
+            // BPMを表示
             Text(String(bpm))
                 .font(.system(size: 68))
             
+            // "+"ボタン: タップするとBPMを1増やす
             Button(action: {
                     self.bpm += 1
             }, label: {
@@ -31,6 +35,7 @@ struct ContentView: View {
             })
             .disabled(isPlaying)
             
+            // 再生・停止ボタン
             if isPlaying == false {
                 Button(action: {
                     hapticController.bpm = Double(self.bpm)
