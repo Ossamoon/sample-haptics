@@ -13,7 +13,7 @@ class HapticController {
     // メトロノームのパラメーター
     var bpm: Double = 120.0
     
-    // オーディオセッション
+    // AudioSession
     private var audioSession: AVAudioSession
     
     // 音声データに関わるパラメータ
@@ -27,7 +27,7 @@ class HapticController {
     // 端末がCore Hapticsに対応しているか
     private var supportsHaptics: Bool = false
     
-    // HapticPatternPlayer(Advacedの方を利用していることに注意)
+    // HapticPatternPlayer
     private var player: CHHapticAdvancedPatternPlayer?
     
     // HapticEventのパラメーター
@@ -42,7 +42,7 @@ class HapticController {
     }
     
     init(){
-        // オーディオセッションの設定
+        // AudioSessionの設定
         audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(.playback)
@@ -73,7 +73,7 @@ class HapticController {
             return
         }
         
-        // オーディオセッションを渡してEngineを作成
+        // AudioSessionを渡してEngineを作成
         do {
             engine = try CHHapticEngine(audioSession: audioSession)
         } catch let error {
@@ -126,14 +126,13 @@ class HapticController {
         do {
             var eventList: [CHHapticEvent] = []
             
-            // 音源のResorceIDを取得
+            // AudioResorceIDを取得
             audioResorceID = try self.engine.registerAudioResource(audioURL!)
             
             // eventListにHapticEventを加えていく
             eventList.append(CHHapticEvent(audioResourceID: audioResorceID!, parameters: [audioVolume], relativeTime: 0, duration: self.audioDuration))
             eventList.append(CHHapticEvent(eventType: .hapticTransient, parameters: [sharpness, intensity], relativeTime: 0))
             eventList.append(CHHapticEvent(eventType: .hapticContinuous, parameters: [sharpness, intensity], relativeTime: 0, duration: self.hapticDuration))
-            
             
             // HapticPatternを生成し返す
             let pattern = try CHHapticPattern(events: eventList, parameters: [])
