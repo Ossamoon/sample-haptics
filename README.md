@@ -1,2 +1,2 @@
 # sample-haptics
-Qiita記事「Core Hapticsを用いて振動つきメトロノームを作る」のサンプルコード
+Qiita記事「Core Hapticsを用いて触覚フィードバック機能つきのメトロノームアプリを作ってみる」のサンプルコード
